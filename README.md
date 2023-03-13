@@ -1,8 +1,10 @@
 # Interaction Design Basics / Grundlagen Interaktiver Gestaltung IA2
-summer-term 2022</br>
-University of Applied Sciences Augsburg, Faculty of Design, https://www.hs-augsburg.de/Gestaltung.html
 
-teaching staff: Slawa Gurevich, Christoph Haag, Andreas Muxel, Silke Hilsing
+## summer-term 2023
+
+[University of Applied Sciences Augsburg, Faculty of Design](https://www.hs-augsburg.de/Gestaltung.html)
+
+teaching staff: Silke Hilsing, Clemens Mahler, CHristoph Haag
 
 * [Block I: Visuelle Systeme](https://github.com/HybridThingsLab/course-interaction-design-2022/tree/master/Block_I)
 * [Block II: Interaktive Systeme](https://github.com/HybridThingsLab/course-interaction-design-2022/tree/master/Block_II)
