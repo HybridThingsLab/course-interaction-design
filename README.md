@@ -1,14 +1,14 @@
 # Interaction Design Basics / Grundlagen Interaktiver Gestaltung IA2
 
-## summer-term 2023
+## Summer Term 2023
 
 [University of Applied Sciences Augsburg, Faculty of Design](https://www.hs-augsburg.de/Gestaltung.html)
 
 teaching staff: Silke Hilsing, Clemens Mahler, Christoph Haag
 
-* [Block I: Visuelle Systeme](https://github.com/HybridThingsLab/course-interaction-design-2022/tree/master/Block_I)
-* [Block II: Interaktive Systeme](https://github.com/HybridThingsLab/course-interaction-design-2022/tree/master/Block_II)
-* [Block III: Physische Systeme](https://github.com/HybridThingsLab/course-interaction-design-2022/tree/master/Block_III)
+* [Block I: Visuelle Systeme](https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_I)
+* [Block II: Interaktive Systeme](https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_II)
+* [Block III: Physische Systeme](https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_III)
 
 ## Setup
 In the end there are a thousand ways to code with p5.js - let's stick to the following toolchain to dive into our course so that it will be easier to support each other.
@@ -51,9 +51,9 @@ How to set Chrome as your default browser for Live Server in Visual Studio Code:
 ### Code Repository
 We packed a bunch of examples from this course as well together with the files needed for p5.js in a folder structure on GitHub. We will update this repository from time to time to correct bugs or add new examples. There are two ways to get all these files.
 
-1. __BEGINNER__: Download the repository from the GitHub Website (https://github.com/HybridThingsLab/course-interaction-design-2022/archive/refs/heads/master.zip). Use button "Clone or Download" on the top right side of the page, download the ZIP and extract it.
+1. __BEGINNER__: Download the repository from the GitHub Website (https://github.com/HybridThingsLab/course-interaction-design/archive/refs/heads/master.zip). Use button "Clone or Download" on the top right side of the page, download the ZIP and extract it.
 
-2. __EXPERT__: In Visual Studio Code click the "Files" Icon, then "Clone Repository", paste the Repository URL https://github.com/HybridThingsLab/course-interaction-design-2022, hit Enter, create a folder for our files and select it as download location.
+2. __EXPERT__: In Visual Studio Code click the "Files" Icon, then "Clone Repository", paste the Repository URL https://github.com/HybridThingsLab/course-interaction-design, hit Enter, create a folder for our files and select it as download location.
 On Windows Machines you also need to install Git: https://git-scm.com/download/win
 
 Whenever we will make a update to the repository, you can pull those changes to your local folder structure:
