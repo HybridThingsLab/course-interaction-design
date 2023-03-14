@@ -1,7 +1,8 @@
-var w = window.innerWidth;
-var h = window.innerHeight;
+var w,h;
 
 function setup() {
+  w = windowWidth;
+  h = windowHeight;
   canvas = createCanvas(w, h);
 }
 
@@ -17,8 +18,10 @@ function draw() {
 }
 
 function windowResized() {
-  // assigns new values for width and height variables
-  w = window.innerWidth;
-  h = window.innerHeight;
+  // if window resized
+  // update variables
+  w = windowWidth;
+  h = windowHeight;
+  // assigns new values 
   resizeCanvas(w, h);
 }

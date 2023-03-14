@@ -1,12 +1,13 @@
-// https://p5js.org/reference/#/p5.Oscillator
+var w,h;
 
-var w = window.innerWidth;
-var h = window.innerHeight;  
+// https://p5js.org/reference/#/p5.Oscillator
 
 let osc, playing, freq, amp;
 
 function setup() {
-  canvas=createCanvas(w,h);
+  w = windowWidth;
+  h = windowHeight;
+  canvas = createCanvas(w, h);
 
   let cnv = createCanvas(w,h);
   cnv.mousePressed(playOscillator);
@@ -46,8 +47,10 @@ function mouseReleased() {
 }
 
 function windowResized() {
-    // assigns new values for width and height variables
-    w = window.innerWidth;
-    h = window.innerHeight;
-    resizeCanvas(w,h);
+  // if window resized
+  // update variables
+  w = windowWidth;
+  h = windowHeight;
+  // assigns new values
+  resizeCanvas(w, h);
 }

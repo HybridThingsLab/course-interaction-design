@@ -1,10 +1,10 @@
-var w = window.innerWidth;
-var h = window.innerHeight;
+var w,h;
 
 let clock; // Declare object
 
 function setup() {
-
+  w = windowWidth;
+  h = windowHeight;
   canvas=createCanvas(w,h);
 
   angleMode(DEGREES);
@@ -63,8 +63,11 @@ class clockCount {
 // -------------------------------------------- //
 
 function windowResized() {
-  // assigns new values for width and height variables
-  w = window.innerWidth;
-  h = window.innerHeight;  
-  resizeCanvas(w,h);
+  // if window resized
+  // update variables
+  w = windowWidth;
+  h = windowHeight;
+  // assigns new values
+  resizeCanvas(w, h);
 }
+
