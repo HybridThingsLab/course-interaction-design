@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>html,body,iframe { width: 100vw;
+                              height: 100vh;
+                              margin: 0;
+                              padding: 0; 
+                              overflow: hidden; }
+           body { display: flex;
+                  justify-content: center;
+                  align-items: center; 
+                  background-color: #323232; }
+           iframe { height: 80vh;
+                    width: 80vw;
+                    margin-left: 10vw;
+                    margin-right: 10vw;
+                    border: 0px solid transparent; }
+           #navigation, #title { position: absolute; 
+                                 top: 50px;
+                                 padding: 0; 
+                                 color: #ffffff;}
+           #navigation { right: 10vw; }
+           #title { left: 10vw; }
+    </style>
+    <script src="/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/collection.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    function updateNav(src) {
+
+             relpath  =  src.contentWindow.location.href
+                        .replace(/http:\/\/0.0.0.0:8000\//g, "")
+                        .replace(/\/$/g, "");
+             $("a#rew").attr("href", rew.get(relpath));
+             $("a#ffw").attr("href", ffw.get(relpath));
+             $("#title").text(title.get(relpath));
+             $(document).prop('title', title.get(relpath));
+           //console.log(relpath);
+           //console.log(title.get(relpath));
+    }
+    </script>
+  </head>
+  <body>
+    <div id="title"></div>
+    <div id="navigation">
+    <a href="Block_II/A/aichner_bastian/ticktack" id="rew" class="nav" target="stage">PREVIOUS</a>
+    <a href="Block_II/A/domberger_ludwig/ticktack" id="ffw" class="nav" target="stage">NEXT</a>
+    </div>
+    <iframe src="Block_II/A/binder_lisa/ticktack" name="stage" id="stage" scrolling="no" onLoad="updateNav(this)"></iframe>
+  </body>
+</html>
