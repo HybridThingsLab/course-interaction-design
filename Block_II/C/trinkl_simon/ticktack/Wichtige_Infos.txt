@@ -1,0 +1,5 @@
+Das ist ein Gruppenprojekt von mir und Timo Truger.
+
+Der Code funktioniert einwandfrei mit Live-Server in Visual Code,
+jedoch gibt es einen Bug:
+Beim ersten Start wird die Audio-Eingabe nicht erkannt. Die Lösung ist: die Code-Datei nochmal manuell speichern und den Live-Server aktualisieren lassen. 
