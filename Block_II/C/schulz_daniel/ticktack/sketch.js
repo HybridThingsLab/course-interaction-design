@@ -8,7 +8,7 @@ let pngImage;
 
 
 function preload() {
-  pngImage = loadImage("/bilder/logo.png");
+  pngImage = loadImage("./bilder/logo.png");
 }
 
 function setup() {
@@ -40,7 +40,7 @@ function setup() {
   backButton.hide();
   backButton.mousePressed(hideInstructions);
 
-  video = createVideo('/video/bg.mp4');
+  video = createVideo('./video/bg.mp4');
   video.loop();
   video.hide();
   
@@ -111,7 +111,7 @@ function draw() {
 
 
 function startProgram() {
-  window.location.href="/index2.html";
+  window.location.href="./index2.html";
 }
 
 
