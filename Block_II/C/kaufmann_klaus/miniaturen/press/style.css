@@ -1,9 +1,11 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
-canvas {
-  margin: 64px auto 0px auto;
-  display: block;
-}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
