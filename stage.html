@@ -31,7 +31,7 @@
     function updateNav(src) {
 
              relpath  =  src.contentWindow.location.href
-                        .replace(/http:\/\/0.0.0.0:8000\//g, "")
+                        .replace(/http:\/\/localhost:8000\//g, "")
                         .replace(/\/$/g, "");
              $("a#rew").attr("href", rew.get(relpath));
              $("a#ffw").attr("href", ffw.get(relpath));
