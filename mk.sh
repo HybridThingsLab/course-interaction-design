@@ -27,15 +27,17 @@
              echo "    ['$RELPATH', '$REW'],"  >> ${TMP}.rew
              REW="$RELPATH"
 
-             VORNAME=`echo $RELPATH   | #
-                      cut -d '/' -f 3 | #
-                      cut -d '_' -f 2`
-             NACHNAME=`echo $RELPATH   | #
-                       cut -d '/' -f 3 | #
-                       cut -d '_' -f 1`
+             VN=`echo $RELPATH   | #
+                 cut -d '/' -f 3 | #
+                 cut -d '_' -f 2`
+             NN=`echo $RELPATH   | #
+                 cut -d '/' -f 3 | #
+                 cut -d '_' -f 1`
+             VN="$(tr '[:lower:]' '[:upper:]' <<< ${VN:0:1})${VN:1}"
+             NN="$(tr '[:lower:]' '[:upper:]' <<< ${NN:0:1})${NN:1}"
 
             #TITLETXT=`grep title $RELPATH/index.html`
-             TITLE="$VORNAME $NACHNAME: $TITLETXT"
+             TITLE="$VN $NN: $TITLETXT"
              echo "    ['$RELPATH', '$TITLE'],"  >> ${TMP}.title
         done
      done
