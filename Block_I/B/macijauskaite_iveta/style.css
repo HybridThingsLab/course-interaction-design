@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+}
+
+#left-side {
+  background-color: #f2f2f2;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+#sketch-container {
+  display: flex;
+  align-items: center;
+}
+
+script[src="sketch.js"] {
+  margin-left: 10px;
+}

@@ -1,0 +1,1 @@
+Das Projekt ist über die angegebene URL in URL.txt einsehbar. Es ist für Vollbildformat (F11 im Browser auf Windows) ausgelegt.

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather's Canvas</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <form action="./index.html" method="get">
+      <input type="text" name="place" id="place" placeholder="Location" required>
+      <input type="submit" value="Ok">
+    </form>
+    <script src="./libraries/bezier-easing.min.js"></script>
+    <script src="./js/classes/Raindrop.js"></script>
+    <script src="./js/classes/WindParticle.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/rendering-methods.js"></script>
+    <script src="sketch.js"></script>
+    <section id="all" style="display: none;">
+
+      <div id="renders" style="display: none;"></div>
+
+      <div id="bg"></div>
+
+      <div id="arrows">
+        <div id="left" aria-label="Previous day"></div>
+        <div id="right" aria-label="Next day" class="active"></div>
+      </div>
+
+      <div id="information">
+
+        <div id="canvas-cont">
+          <div id="finish">Finish now</div>
+        </div>
+        
+        <ul id="summaryData">
+          <li id="daytext">
+            <p id="condition">
+            </p>
+            <p id="locdate">
+            </p>
+          </li>
+          <label for="temp">Min / Max</label>
+          <li id="temp">
+            <div id="mintemp">
+            </div>
+            /
+            <div id="maxtemp">
+            </div>
+          </li>
+          <label for="wind">Wind max</label>
+          <li id="wind">
+          </li>
+          <label for="rain">Total precip</label>
+          <li id="rain">
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+  </body>
+</html>
