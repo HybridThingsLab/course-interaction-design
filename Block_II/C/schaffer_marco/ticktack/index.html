@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+  .neutral-bg {
+    background-color: #878787;
+  }
+
+  .happy-bg {
+    background-color: #ffff00;
+  }
+  
+  .angry-bg {
+    background-color: #ff0000;
+  }
+  
+  .surprised-bg {
+    background-color: #00ff00;
+  }
+  
+  .fearful-bg {
+    background-color: #0000ff;
+  }
+  
+  .sad-bg {
+    background-color: #808080;
+  }
+  
+  .disgusted-bg {
+    background-color: #800080;
+  }
+
+
+  video {
+    visibility: hidden;
+  }
+
+  #text {
+    position: absolute;
+    text-align: center;
+    font-size: 100px;
+    width: 100%;
+  }
+
+  .derdiv {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: 50vh;
+    justify-content: center;
+    outline-style: dashed;
+    outline-width: 10px;
+    outline-color:#000000;
+  }
+
+  canvas {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
+  }
+
+  .mainImg {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .legend {
+    position: relative;
+    padding-left: 5vw;
+  }
+
+  ul {
+    justify-content: flex-start;
+  }
+  </style>
+</head>
+<body class="neutral-bg">
+  <video id="video" width="720" height="560" autoplay muted></video> 
+  <div class="derdiv" >
+    <h1 id="text">Loading: ...</h1>
+    <img class="mainImg" id="emoteImg" ></img>
+  </div>
+</body>
+</html>
