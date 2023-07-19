@@ -18,8 +18,26 @@
                     margin-right: 10vw;
                     background-color: #000000;
                     border: 0px solid #000000; }
+           h1 { margin-top: 6vh; 
+                padding-top: 4vh;
+           }
+           a { color: #ffffff!important; 
+               text-decoration: none;
+           }
+           .fullscreen { position: absolute; 
+                         top: 0; left: 0;
+                         height: 92vh; width: 92vw;
+                         padding-left: 4vw;
+                         padding-right: 4vw;
+                         padding-top: 2vh;
+                         padding-bottom: 6vh;
+                         overflow-y: scroll;
+                         background-color: #ff0000;
+           }
+           .hide { display: none; }
+           p.list { font-size: 2em; }
            #navigation, #title { position: absolute; 
-                                 top: 50px;
+                                 top: 7vh;
                                  padding: 0; 
                                  color: #ffffff;}
            #navigation { right: 10vw; }
@@ -35,19 +53,106 @@
                         .replace(/\/$/g, "");
              $("a#rew").attr("href", rew.get(relpath));
              $("a#ffw").attr("href", ffw.get(relpath));
+             $("a#reload").attr("href", relpath);
              $("#title").text(title.get(relpath));
              $(document).prop('title', title.get(relpath));
-           //console.log(relpath);
-           //console.log(title.get(relpath));
     }
+
+    $(document).ready(function() {
+        $('#index a').click(function() {
+            $('#index').addClass('hide');
+        });
+         $('a#up').click(function() {
+            $('#index').removeClass('hide');
+        });       
+        $('.blocki_minute').click(function() {
+            $("a#up").attr("href", "#blocki_minute");
+        });
+        $('.blocki_b').click(function() {
+            $("a#up").attr("href", "#blocki_b");
+        });
+        $('.blockii_miniaturen').click(function() {
+            $("a#up").attr("href", "#blockii_miniaturen");
+        });
+        $('.blockii_ticktack').click(function() {
+            $("a#up").attr("href", "#blockii_ticktack");
+        });
+    });
     </script>
   </head>
   <body>
     <div id="title"></div>
     <div id="navigation">
-    <a href="" id="rew" class="nav" target="stage">PREVIOUS</a>
-    <a href="" id="ffw" class="nav" target="stage">NEXT</a>
+    <a href="" id="rew" class="nav" target="stage">←</a>
+    <a href="" id="ffw" class="nav" target="stage">→</a>
+    <a href="" id="up" class="nav">INDEX</a>
+    <a href="" id="reload" class="nav" target="stage">RELOAD</a>
     </div>
-    <iframe src="Block_II/A/aichner_bastian/miniaturen/push" name="stage" id="stage" scrolling="no" onLoad="updateNav(this)"></iframe>
+    </div>
+    <iframe src="" name="stage" id="stage" scrolling="no" onLoad="updateNav(this)"></iframe>
+    <div id="index" class="fullscreen">
+    <h1 id="blocki_minute">Miniaturen: Eine Minute</h1>
+    <p class="description">
+    description
+    </p>
+    <p class="list">
+    <span class="name">Bastian Aichner:</span>
+    <a href="Block_I/A/aichner_bastian/minute_color" target="stage" class="blocki">Farbe/Kontrast</a>
+    <a href="Block_I/A/aichner_bastian/minute_shape" target="stage" class="blocki">Punkt/Linie/Fläche</a>
+    <a href="Block_I/A/aichner_bastian/minute_typo" target="stage" class="blocki">Typographie</a>
+    <span class="name">Stefan Bäßler:</span>
+    <a href="Block_I/A/baessler_stefan/minute_color" target="stage" class="blocki">Farbe/Kontrast</a>
+    <a href="Block_I/A/baessler_stefan/minute_shape" target="stage" class="blocki">Punkt/Linie/Fläche</a>
+    <a href="Block_I/A/baessler_stefan/minute_typo" target="stage" class="blocki">Typographie</a>
+    </p>
+
+    <h1 id="blocki_b">Visualisierungen</h1>
+    <p class="list">
+    <span class="name">Lena Heidle:</span>
+    <a href="Block_I/B/heidle_lena" target="stage" class="blocki_b">Buchverkauf pro Minute</a>
+    </p>
+    <div class="img">
+    <a href="Block_I/B/heidle_lena" target="stage" class="blocki_b">
+    <img src="Block_I/B/heidle_lena/titel.png"/></a>
+    </div>
+    <h1 id="blockii_miniaturen">Miniaturen: Interaktion</h1>
+    <p>Erstellen Sie interaktive Miniaturen zu folgenden Begriffen.</p>
+    <ul>
+    <li><strong>Ziehen</strong></li>
+    <li><strong>Drücken</strong></li>
+    <li><strong>Drehen</strong></li>
+    </ul>
+    <p>Experimentieren Sie mit verschiedenen grafischen Ausdrucksformen wie <strong>Punkt</strong>, <strong>Linie</strong>, <strong>Geometrie</strong>, <strong>Typografie</strong>. Arbeiten Sie zunächst in <strong>Schwarz/Weiss</strong> und verwenden Sie Farbe nur wenn notwendig und argumentierbar. <em><strong>Achten Sie auf Interaktionsdetails!</strong></em></p>
+
+
+    <p class="list">
+    <span class="name">Bastian Aichner:</span>
+    <a href="Block_II/A/aichner_bastian/miniaturen/pull" target="stage" class="blockii_miniaturen">Ziehen</a>
+    <a href="Block_II/A/aichner_bastian/miniaturen/push" target="stage" class="blockii_miniaturen">Drücken</a>
+    <a href="Block_II/A/aichner_bastian/miniaturen/turn" target="stage" class="blockii_miniaturen">Drehen</a>
+    <span class="name">Stefan Bäßler:</span>
+    <a href="Block_II/A/baessler_stefan/miniaturen/pull" target="stage" class="blockii_miniaturen">Ziehen</a>
+    <a href="Block_II/A/baessler_stefan/miniaturen/push" target="stage" class="blockii_miniaturen">Drücken</a>
+    <a href="Block_II/A/baessler_stefan/miniaturen/turn" target="stage" class="blockii_miniaturen">Drehen</a>
+    </p>
+
+
+    <h1 id="blockii_ticktack">tick tack</h1>
+
+    <p class="description"><strong>Die Uhr tickt. Aber nicht alleine. Was tun?</strong></p>
+    <p class="description">z.B. <em>Touch, Double touch, Drag, Swipe, Fling, Long press, Long-press drag, Double-touch drag, Pinch open, Pinch closed, Two-finger touch, Two-finger, Two-finger long-press drag, Two-finger double touch</em></p>
+    <p class="description">Entwerfen Sie ein <strong>experimentelles, screenbasiertes Interface</strong> das den (vollen) Einsatz der <strong>User:innen</strong> als <strong>Taktgeber</strong> verlangt.</p>
+
+    <p class="list">
+    <a href="Block_II/A/aichner_bastian/ticktack" target="stage" class="blockii_ticktack">
+    <span>Bastian Aichner:</span> Tick Tack
+    </a>
+    <a href="Block_II/A/baessler_stefan/ticktack" target="stage" class="blockii_ticktack">
+    <span>Stefan Bäßler:</span> Tick Tack
+    </a>
+    </p>
+
+
+    </div>
   </body>
 </html>
