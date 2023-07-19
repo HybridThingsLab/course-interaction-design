@@ -126,7 +126,7 @@ var title = new Map([
     ['Block_II/A/binder_lisa/ticktack', 'Lisa Binder: Pendulum'],
     ['Block_II/A/breitenbach_petra/ticktack', 'Petra Breitenbach: 30 Clicks'],
     ['Block_II/A/breunig_maximilian/ticktack', 'Maximilian Breunig: Type-Tack'],
-    ['Block_II/A/bui_viet-duc/ticktack', 'Viet-duc Bui: Tick-Tack'],
+    ['Block_II/A/bui_viet-duc/ticktack', 'Viet-Duc Bui: Tick-Tack'],
     ['Block_II/A/christmann_tomas/ticktack', 'Tomas Christmann: BPM Tapper'],
     ['Block_II/A/dieminger_annika/ticktack', 'Annika Dieminger: TikTak'],
     ['Block_II/A/domberger_ludwig/ticktack', 'Ludwig Domberger: TickTack'],
