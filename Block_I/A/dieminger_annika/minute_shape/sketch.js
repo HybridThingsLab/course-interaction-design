@@ -13,10 +13,10 @@ function preload() {
 }
 
 function setup() {
-  x = displayWidth/11;
-  y = displayHeight/10 + (displayHeight/10)/2;
-  graphics = createGraphics(displayWidth, displayHeight);
-  canvas = createCanvas(displayWidth, displayHeight).parent('canvas');
+  x = windowWidth/11;
+  y = windowHeight/11;
+  graphics = createGraphics(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight).parent('canvas');
   frameRate(80);
   graphics.background(0); 
 }
@@ -38,13 +38,13 @@ function draw() {
   }
 
   if (frameCounter % 720 == 0) {
-    x = x + displayWidth/11;
-    y = displayHeight/10 + (displayHeight/10)/2;
+    x = x + windowWidth/11;
+    y = windowHeight/11;
   }
 
   if (frameCounter >= 7200) { // changed condition to always be true after 7200 frames
-    x = displayWidth/11;
-    y = displayHeight/10 + (displayHeight/10)/2;
+    x = windowWidth/11;
+    y = windowHeight/11;
     graphics.background(0); // reset background
     frameCounter = 0; // reset frame counter
   }
