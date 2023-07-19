@@ -1,272 +1,276 @@
-
+let rotiere1 = 0;
+let counter1 = 0;
+let numPoints = 20;
+let points = [];
+let balls = [];
+let redballs = [];
+let d = 20;
+let erwischt = false;
+let gamespeed = 60;
+let i = 5;
+let redspeed = 60;
+let textr = 0;
+let textg = 0;
+let textb = 0;
+let gameOver = false;
+let gameStarted = false;
+let startTime = 0;
+let highScore;
+let highScoreSet = false;
+let roterwischt = false;
+let easingFactor = 0.08;
+let targetRotation = 6.28;
+let rotieregruen = 0;
+let myFont;
+let rotateNum = false;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  rectMode(CENTER);
-  b = width/8;
-  x = width/4;
-  y = height/4 * 0.75;
-  yb = y*2;
 
-  check = true;
-
-  
-  textSize(30);
-  anweisung = "Grün";
-  textAlign(CENTER);
-
-  farbe = int(random(0,2));
-
-  if(farbe == 0){
-    grun = 255;
-    rot = 0;
+  for (let i = 0; i < numPoints; i++) {
+    let pointt = createVector(width / 2, height / 2);
+    points.push(pointt);
   }
-  else{
-    grun = 0;
-    rot = 255;
-  }
-
-  counter = 0;
-  timer = 5;
-
-  farbekasten = 255;
-  farbekastenrichtig = 255;
 }
 
 function draw() {
-  background(255);
+  textFont(myFont);
 
- fill(50);
-  
-  beginShape();
-  vertex(-50, height);
-  vertex(width/8, height/5*2.8);
-  vertex(width - width/8, height/5*2.8);
-  vertex(width+50, height);
-  endShape(CLOSE);
+  if (!gameStarted) {
+    noStroke();
+    fill(0);
+    background(250);
+    textSize(40);
+    textAlign(CENTER);
+    //text("Start Game", width/2, height*0.25);
+    textSize(20);
+    text(
+      "Catch the green balls til you reach 30 seconds",
+      width / 2,
+      height * 0.3
+    );
+    text("Each green ball is worth 1 second", width / 2, height * 0.35);
+    text(
+      "Watch out for the red balls, or you lose 2 seconds!",
+      width / 2,
+      height * 0.4
+    );
+    stroke(250, 0, 0);
+    strokeWeight(5);
+    textSize(30);
+    text("Press     SPACE    to play", width / 2, height * 0.55);
+    stroke(0);
+    textSize(20);
+  }
 
-  translate(width/2, height/2);
- 
+  if (gameStarted) {
+    noStroke();
 
-  milliseconds = int(millis() % 60000);
-  seconds = int(milliseconds / 1000);
+    if (rotateNum) {
+      let rotationDiff = targetRotation - rotiere1;
+      let easedRotationDiff = rotationDiff * easingFactor;
+      rotiere1 += easedRotationDiff;
+      if (rotationDiff <= 0.01) {
+        rotateNum = false;
+      }
+    }
+    if (counter1 <= -10) {
+      counter1 = -10;
+    }
 
-  
+    if (erwischt && roterwischt) {
+      rotiere1 += 0.25;
+    }
 
-  noStroke();
-  fill(0,255,0);
-  rect(-x, y, b, b, 50, 0, 0, 50);
+    if (counter1 >= 30) {
+      gameOver = true;
+      counter1 = 0;
+      gamespeed = 60;
+      redspeed = 90;
+    }
 
-  fill(255,0,0);
-  rect(x, y, b, b, 0, 50, 50, 0);
+    fill(0);
+    rect(0, 0, width, height / 2); //WHITE
 
-  fill(50);
-  rect(x-10, y, b, b-20, 0, 40, 40, 0);
-  rect(-x+10, y, b, b-20, 40, 0, 0, 40);
+    fill(0);
+    rect(0, height * 0.35, width, height); //BLACK
 
+    points.shift();
+    let pointt = createVector(mouseX, mouseY);
+    points.push(pointt);
 
-  fill(10);
-  rect(-x, yb+10, b+10, b+10, 20);
-  fill(0, 255, 0);
-  rect(-x, yb, b, b, 20);
+    stroke(255);
+    strokeWeight(4);
+    strokeJoin(ROUND);
+    noFill();
+    beginShape();
+    for (let i = 0; i < points.length; i++) {
+      let pt = points[i];
+      curveVertex(pt.x, pt.y);
+    }
+    endShape();
 
-  fill(10);
-  rect(x, yb+10, b+10, b+10, 20);
-  fill(255, 0, 0);
-  rect(x, yb, b, b, 20);
-  
+    push();
+    translate(width / 2, -10);
+    rotate(radians(0));
+    if (erwischt) {
+      rotate(rotiere1);
+    } else if (roterwischt) {
+      rotate(-rotiere1);
+    }
 
-
-
-
-  fill(farbekastenrichtig,255, farbekastenrichtig);
-  rect(0, -175, 250, 175, 25);
-
-  fill(farbekasten);
-  rect(0, -175, 200, 125, 25);
-
-  textSize(75);
-  fill(rot, grun, 0);
-  text(anweisung, 10, -100, x+50, y+50);
-
-  textSize(25);
-  fill(0);
-  text("Score: "+counter, -width/2 + 100, -height/2 + 250, x+50, y+50);
- 
-  fill(130, 130, 130);
-  stroke(2)
-  rect(0, y, width/2.5, b, 10);
-  rect(0, y, width/2.5, b/3, 10);
-
-  fill(100);
-  rect(0, y, width/8, b+50, 10);
-  fill(255);
-  rect(0, y-30, width/9, b/2,10);
-
-  if(seconds >= timer){
-    background(0);
     textSize(100);
-    text("GAME OVER", 0, height/4+height/8, width, height);
-    textSize(75);
-    text("Score: " + counter, 0, height/4*3 - height/8, width, height);
-    noLoop();
+    fill(textr, textg, textb);
+    text(counter1, -30, height * 0.2); //counter anzeige
+
+    pop();
+
+    if (frameCount % gamespeed == 0) {
+      //GREEN BALLS
+      balls.push(new Ball(random(0, width - 15), 0 + 15)); // height*0.35
+    }
+
+    if (frameCount % redspeed == 0) {
+      //RED BALLS
+      redballs.push(new RedBall(width - 15, random(15, height - 15)));
+    }
+
+    if (counter1 == i) {
+      gamespeed -= 20;
+      redspeed -= 20;
+      i += 5;
+    }
+    if (gamespeed <= 20) {
+      gamespeed = 20;
+    }
+    if (redspeed <= 20) {
+      redspeed = 20;
+    }
+
+    //console.log(gamespeed + "        " + redspeed);
+
+    for (let i = 0; i < balls.length; i++) {
+      balls[i].fall();
+      balls[i].display();
+    }
+
+    for (let i = 0; i < redballs.length; i++) {
+      redballs[i].fallred();
+      redballs[i].displayred();
+    }
   }
+  if (gameOver) {
+    noStroke();
+    fill(0);
+    background(250);
+    textSize(40);
+    textAlign(CENTER);
+    text("Game Over", width / 2, height * 0.25);
+    textSize(30);
+    //text("Highscores", width / 2, height * 0.35);
+    textSize(20);
 
-  
-
-  textSize(30);
-  fill(0);
-  text(timer - seconds, 5, y, 100, 100);
-
-  if(seconds == 59 && check){
-    timer -= 60;
-    check = false;
+    if (!highScoreSet) {
+      let timeTaken = (millis() - startTime) / 1000;
+      highScoreSet = true;
+     //if (timeTaken < highScore) { // ob Zeit aktuellen Highscore schlägt
+      highScore = timeTaken;
+    }
+    text(
+      "Your Score: " + highScore.toFixed(3) + " seconds",
+      width / 2,
+      height * 0.4
+    );
+    // }
+    stroke(250, 0, 0);
+    text("Press     SPACE    to play", width / 2, height * 0.6);
   }
-  else if(seconds != 59){
-    check = true;
-  }
-  
-  farbekasten += 10;
-  farbekastenrichtig += 10;
-
 }
 
 function keyPressed() {
-  if(seconds <= timer){
-    if (keyCode === LEFT_ARROW) {
-    if(farbe == 0){
-      background(255);
-      counter++;
-      timer++;
-      farbekastenrichtig = 0;
-    }
-    else{
-      timer -= 5;
-      farbekasten = 0;
-    }
-    a = int(random(0,2));
-    farbe = int(random(0,2));
-
-    if(a == 0){
-      anweisung = "Grün";
-    }
-    else{
-      anweisung = "Rot";
-    }
-
-    if(farbe == 0){
-      grun = 255;
-      rot = 0;
-    }
-    else{
-      grun = 0;
-      rot = 255;
-    }
-
-  } else if (keyCode === RIGHT_ARROW) {
-    if(farbe == 1){
-      background(255);
-      counter++;
-      timer++;
-      farbekastenrichtig = 0;
-    }
-    else{
-      timer -= 5;
-      farbekasten = 0;
-    }
-
-    a = int(random(0,2));
-    farbe = int(random(0,2));
-
-    if(a == 0){
-      anweisung = "Grün";
-    }
-    else{
-      anweisung = "Rot";
-    }
-
-    if(farbe == 0){
-      grun = 255;
-      rot = 0;
-    }
-    else{
-      grun = 0;
-      rot = 255;
-    }
+  if (gameOver && key == " ") {
+    gameOver = false;
   }
+  if (!gameStarted && key == " ") {
+    gameStarted = true;
   }
-  
 }
 
-function mousePressed(){
-  if(seconds <= timer){
-    if(mouseX > width/4 - b/2 && mouseX < width/4+b/2 && mouseY > (height/4 * 0.75) * 2 + height/2 - b/2 && mouseY < (height/4 * 0.75) * 2 + height/2 + b/2){
-    if(farbe == 0){
-      background(255);
-      counter++;
-      timer++;
-      farbekastenrichtig = 0;
-    }
-    else{
-      timer -= 5;
-      farbekasten = 0;
-    }
-    a = int(random(0,2));
-    farbe = int(random(0,2));
-
-    if(a == 0){
-      anweisung = "Grün";
-    }
-    else{
-      anweisung = "Rot";
-    }
-
-    if(farbe == 0){
-      grun = 255;
-      rot = 0;
-    }
-    else{
-      grun = 0;
-      rot = 255;
-    }
-  }
-  else if(mouseX > width/4*3 - b/2 && mouseX < width/4*3 +b/2 && mouseY > (height/4 * 0.75)*2 + height/2 - b/2 && mouseY < (height/4 * 0.75)*2 + height/2 + b/2){
-    if(farbe == 1){
-      background(255);
-      counter++;
-      timer++;
-      farbekastenrichtig = 0;
-    }
-    else{
-      timer -= 5;
-      farbekasten = 0;
-    }
-
-    a = int(random(0,2));
-    farbe = int(random(0,2));
-
-    if(a == 0){
-      anweisung = "Grün";
-    }
-    else{
-      anweisung = "Rot";
-    }
-
-    if(farbe == 0){
-      grun = 255;
-      rot = 0;
-    }
-    else{
-      grun = 0;
-      rot = 255;
-    }
+class Ball {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.speed = 5;
+    this.radius = d;
   }
 
-  
+  fall() {
+    this.y += this.speed;
   }
-  
+
+  display() {
+    stroke(0, 250, 0);
+    ellipse(this.x, this.y, this.radius);
+
+    if (
+      mouseX >= this.x - 15 &&
+      mouseX <= this.x + 15 &&
+      mouseY >= this.y - 15 &&
+      mouseY <= this.y + 15
+    ) {
+      textr = 0;
+      textg = 250;
+      textb = 0;
+      let index = balls.indexOf(this);
+      balls.splice(index, 1);
+      counter1++;
+      rotiere1 = 0;
+      erwischt = true;
+      roterwischt = false;
+      rotateNum = true;
+    }
+  }
 }
 
+class RedBall {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.speed = 5;
+    this.radius = d + 5;
+  }
+
+  fallred() {
+    this.x -= this.speed;
+  }
+
+  displayred() {
+    stroke(250, 0, 0);
+    ellipse(this.x, this.y, this.radius);
+
+    if (
+      mouseX >= this.x - 15 &&
+      mouseX <= this.x + 15 &&
+      mouseY >= this.y - 15 &&
+      mouseY <= this.y + 15
+    ) {
+      textr = 250;
+      textg = 0;
+      textb = 0;
+      counter1 -= 2;
+      roterwischt = true;
+      erwischt = false;
+      rotateNum = true;
+      rotiere1 = 0;
+      let index = redballs.indexOf(this);
+      redballs.splice(index, 1);
+    }
+  }
+}
+
+function preload() {
+ myFont = loadFont('PressStart2P-Regular.ttf');
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
