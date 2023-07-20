@@ -2,7 +2,7 @@ let canvas;
 
 function setup() {
   canvas = createCanvas(640, 480);
-  canvas.position(0, 0);
+//canvas.position(0, 0);
   background(115,28,40)
 
   textFont('Georgia');
@@ -15,7 +15,7 @@ function setup() {
   text("Wanna try again?", width / 2, 255);
 
   let button = createButton("Start");
-  button.position(width / 2 - 50, 300);
+//button.position(width / 2 - 50, 300);
   button.size(100, 50);
   button.style("font-family", 'Georgia');
   button.style("font-size", "23px");
