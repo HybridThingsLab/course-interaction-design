@@ -162,6 +162,7 @@ var title = new Map([
     ['Block_I/B/litzel_christian', 'Christian Litzel: Puls'],
     ['Block_I/B/macijauskaite_iveta', 'Iveta Macijauskaite: Unser Leben hängt vom Luftstrom ab'],
     ['Block_I/B/mayr_marie', 'Marie Mayr: Minuten Knaller'],
+    ['Block_I/B/merbecks_laurin', 'Laurin Merbecks: One Minute'],
     ['Block_I/B/pohl_jessica', 'Jessica Pohl: Sound Circle'],
     ['Block_I/B/roemmelt_alina', 'Alina Römmelt: Planeten'],
 ]);
@@ -325,7 +326,8 @@ var ffw   = new Map([
     ['Block_I/B/kurzmann_paul', 'Block_I/B/litzel_christian'],
     ['Block_I/B/litzel_christian', 'Block_I/B/macijauskaite_iveta'],
     ['Block_I/B/macijauskaite_iveta', 'Block_I/B/mayr_marie'],
-    ['Block_I/B/mayr_marie', 'Block_I/B/pohl_jessica'],
+    ['Block_I/B/mayr_marie', 'Block_I/B/merbecks_laurin'],
+    ['Block_I/B/merbecks_laurin', 'Block_I/B/pohl_jessica'],
     ['Block_I/B/pohl_jessica', 'Block_I/B/roemmelt_alina'],
     ['Block_I/B/roemmelt_alina', 'Block_I/B/heidle_lena'],
 ]);
@@ -490,6 +492,7 @@ var rew   = new Map([
     ['Block_I/B/litzel_christian', 'Block_I/B/kurzmann_paul'],
     ['Block_I/B/macijauskaite_iveta', 'Block_I/B/litzel_christian'],
     ['Block_I/B/mayr_marie', 'Block_I/B/macijauskaite_iveta'],
-    ['Block_I/B/pohl_jessica', 'Block_I/B/mayr_marie'],
+    ['Block_I/B/merbecks_laurin', 'Block_I/B/mayr_marie'],
+    ['Block_I/B/pohl_jessica', 'Block_I/B/merbecks_laurin'],
     ['Block_I/B/roemmelt_alina', 'Block_I/B/pohl_jessica'],
 ]);
