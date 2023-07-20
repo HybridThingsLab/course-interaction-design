@@ -7,7 +7,7 @@ let h = 800;
 // preload
 function preload() {
   // load data here
-  customFont = loadFont('data/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
+  customFont = loadFont('IBMPlexMono-Regular.ttf');
 }
 
 // setup
