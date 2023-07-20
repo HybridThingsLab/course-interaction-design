@@ -1,0 +1,44 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin: 5%;
+  padding-right: 100px;
+}
+
+h1 {
+  font-size: 500%;
+}
+
+p {
+  font-size: 150%;
+}
+
+#farbe {
+  color: #8080FF;
+}
+
+#weiss {
+  color: lightgrey;
+}
+
+
