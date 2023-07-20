@@ -7,7 +7,7 @@ var lives = 5;
 let myFont;
 
 function preload() {
-    myFont = loadFont('assets/DePixelHalbfett.otf');
+    myFont = loadFont('DePixelHalbfett.otf');
 }
 
 function setup() {
