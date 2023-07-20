@@ -88,6 +88,9 @@
         });
          $('a#up').click(function() {
             $('#index').removeClass('hide');
+            var frame = document.getElementById("stage"),
+            frameDoc = frame.contentDocument || frame.contentWindow.document;
+            frameDoc.removeChild(frameDoc.documentElement);
         });       
         $('.blocki_minute').click(function() {
             $("a#up").attr("href", "#blocki_minute");
