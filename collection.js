@@ -147,7 +147,7 @@ var title = new Map([
     ['Block_II/C/trinkl_simon/ticktack', 'Simon Trinkl: Lovely Sounds'],
     ['Block_II/C/wagner_dennis/ticktack', 'Dennis Wagner: Fishin\' Impossible'],
     ['Block_II/C/wehner_romina/ticktack', 'Romina Wehner: Headshot'],
-    ['Block_II/C/wiedemann_florian/ticktack', 'Florian Wiedemann: Running Walls'],
+    ['Block_II/C/wiedemann_florian/ticktack', 'Florian Wiedemann: Running Walls (Influence it by raising your hand!)'],
     ['Block_II/C/winatschek_marcel/ticktack', 'Marcel Winatschek: Stay Fucking Happy!'],
     ['Block_II/C/wonka_sophia/ticktack', 'Sophia Wonka: digital emotion mirror'],
     ['Block_II/C/zettelmann_kay/ticktack', 'Kay Zettelmann: INTO THE DEEP'],
