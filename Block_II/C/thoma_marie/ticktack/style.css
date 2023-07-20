@@ -1,7 +1,13 @@
 html, body {
     margin: 0;
     padding: 0;
-  }
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8566f;
+}
   canvas {
     display: block;
   }
@@ -11,6 +17,10 @@ html, body {
     border-radius: 5px;
     color: white;
     background: #F2AFB9;
+
+    position: absolute;
+    top: 380px;
+
   }
   
   button:hover {
