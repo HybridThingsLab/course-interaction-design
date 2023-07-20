@@ -6,7 +6,7 @@ let seconds, milliseconds;
 let customFont;
 
 function preload(){
-  customFont = loadFont('font/square.ttf');
+  customFont = loadFont('square.ttf');
 }
 
 function setup() {
