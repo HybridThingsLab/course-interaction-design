@@ -12,10 +12,10 @@ let circleWidth, r, g, b, tap;
 let song, song2, song3, song4;
 
 function preload(){
-  song=loadSound("sounds/rickroll.mp3");
-  song2=loadSound("sounds/neighborhood.mp3");
-  song3=loadSound("sounds/amogus.mp3");
-  song4=loadSound("sounds/pac.mp3");
+  song=loadSound("rickroll.mp3");
+  song2=loadSound("neighborhood.mp3");
+  song3=loadSound("amogus.mp3");
+  song4=loadSound("pac.mp3");
 }
 
 function setup() {
