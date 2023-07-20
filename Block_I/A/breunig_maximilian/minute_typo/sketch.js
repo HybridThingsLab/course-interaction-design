@@ -9,8 +9,8 @@ var count =0;
 
 function preload() {
 
-  customFont1 = loadFont('data/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
-  customFont2 = loadFont('data/IBM_Plex_Mono/IBMPlexMono-Italic.ttf');
+  customFont1 = loadFont('IBMPlexMono-Regular.ttf');
+  customFont2 = loadFont('IBMPlexMono-Italic.ttf');
 }
 
 function setup() {
