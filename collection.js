@@ -42,7 +42,7 @@ var title = new Map([
     ['Block_I/A/halang_sarah/minute_typo', 'Sarah Halang: Eine Minute (Typographie)'],
     ['Block_I/A/hartmann_jule/minute_color', 'Jule Hartmann: Eine Minute (Farbe/Kontrast)'],
     ['Block_I/A/hartmann_jule/minute_shape', 'Jule Hartmann: Eine Minute (Punkt/Linie/Fläche)'],
-    ['Block_I/A/hartmann_jule/minute_typo', 'Jule Hartmann: Eine Minute (Typographie)],'],
+    ['Block_I/A/hartmann_jule/minute_typo', 'Jule Hartmann: Eine Minute (Typographie)'],
     ['Block_I/A/haslauer_sarah/minute_color', 'Sarah Haslauer: Eine Minute (Farbe/Kontrast)'],
     ['Block_I/A/haslauer_sarah/minute_shape', 'Sarah Haslauer: Eine Minute (Punkt/Linie/Fläche)'],
     ['Block_I/A/haslauer_sarah/minute_typo', 'Sarah Haslauer: Eine Minute (Typographie)'],
