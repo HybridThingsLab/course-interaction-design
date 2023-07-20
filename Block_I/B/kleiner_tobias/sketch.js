@@ -8,7 +8,7 @@ let earth;
 
 function preload() {
   //source for data: https://www.statista.com/chart/24604/number-of-people-launched-into-space-by-year/
-  table = loadStrings('assets/Data.csv', 'csv', 'header');
+  table = loadStrings('Data.csv', 'csv', 'header');
 
 }
 
