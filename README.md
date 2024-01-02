@@ -1,6 +1,6 @@
 # Interaction Design Basics / Grundlagen Interaktiver Gestaltung IA2
 
-## Summer Term 2023
+## Summer Term 2024
 
 [University of Applied Sciences Augsburg, Faculty of Design](https://www.hs-augsburg.de/Gestaltung.html)
 
