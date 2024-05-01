@@ -22,7 +22,7 @@ function draw() {
   // (IOW draw a circle for every finger tip touching screen)
   // do this first so info text goes *over* the ellipses
   for (let i = 0; i < touches.length; i++) {
-    ellipse(touches[i].x, touches[i].y, 250, 250);
+    ellipse(touches[i].x, touches[i].y, 50, 50);
   }
 
   // if no touches but touchstarted == true, then it's a regular
