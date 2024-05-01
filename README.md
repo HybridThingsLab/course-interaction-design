@@ -2,13 +2,10 @@
 
 ## Summer Term 2024
 
-[University of Applied Sciences Augsburg, Faculty of Design](https://www.hs-augsburg.de/Gestaltung.html)
+[Augsburg Technical University of Applied Sciences, Faculty of Design](https://www.tha.de/Gestaltung.html)
 
-teaching staff: Prof. Andreas Muxel, Silke Hilsing, Clemens Mahler, Christoph Haag
+teaching staff: Prof. Andreas Muxel, Prof. Daniel Rothaug, Clemens Mahler
 
-* [Block I: Visuelle Systeme](https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_I)
-* [Block II: Interaktive Systeme](https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_II)
-* [Block III: Physische Systeme](https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_III)
 
 ## Setup
 In the end there are a thousand ways to code with p5.js - let's stick to the following toolchain to dive into our course so that it will be easier to support each other.
