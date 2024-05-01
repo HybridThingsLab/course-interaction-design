@@ -8,9 +8,8 @@ let div;
 let loaded = false;
 
 function setup() {
-  div = createDiv('<br>face-api models are loading...');
 
-  canvas = createCanvas(640, 480).parent('myCanvas');
+  canvas = createCanvas(640, 480).parent('canvas');
 
   // use an async callback to load in the models and run the getResults() function
   vid = createCapture(VIDEO, async () => {
@@ -18,10 +17,9 @@ function setup() {
     await faceapi.loadFaceLandmarkModel(MODEL_URL);
     await faceapi.loadFaceRecognitionModel(MODEL_URL);
     await faceapi.loadFaceExpressionModel(MODEL_URL);
-    div.elt.innerHTML = '<br>model loaded!';
     loaded = true;
     getResults(); // init once
-  }).parent('myCanvas');
+  }).parent('canvas');
   vid.size(640, 480);
   vid.hide();
 }
