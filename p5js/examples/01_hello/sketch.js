@@ -1,6 +1,5 @@
 // globals
 let customFont;
-let seconds, milliseconds, millisecondsPerSecond;
 
 // preload
 function preload() {
