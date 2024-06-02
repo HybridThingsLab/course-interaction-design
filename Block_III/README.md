@@ -8,6 +8,7 @@ For this course you will need
 * Ardunio UNO, Seedunio, Funduino UNO or similar
 * USB Data Cable for your Arduino. __Attention: Many USB Cable are only for charging, not for Data!__
 * [Seeed Studio Grove - Starter Kit for Arduino](https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html)
+* [Wiki Prototyping Lab](https://github.com/HybridThingsLab/protobase/wiki/Seeed-Grove-System)
 
 ### Environment
 * Download and install the Arduino IDE from [Arduino.cc](https://www.arduino.cc/en/Main/Software) - on Mac, drag the software to your Applications Folder
@@ -25,6 +26,3 @@ For this course you will need
 * Plug the green LED into the corresponding holes of the "LED Socket" module, the LED has a "flat" side that should point in the same direction as on the symbolic circle right below the holes
 * Attach the LED Socket module to Socket D3 of the Grove Base Shield
 * Attach the Rotary Angle Sensor in A0
-
-### Communication between P5.js and Arduino
-Have a look on the description and examples [here](https://github.com/HybridThingsLab/course-interaction-design-2021/tree/main/Block_III/Arduiuno_p5js).
