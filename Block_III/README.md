@@ -11,7 +11,7 @@ For this course you will need
 * [Wiki Prototyping Lab](https://github.com/HybridThingsLab/protobase/wiki/Seeed-Grove-System)
 
 ### Environment
-* Download and install the Arduino IDE from [Arduino.cc](https://www.arduino.cc/en/Main/Software) - on Mac, drag the software to your Applications Folder
+* Download and install the Arduino IDE from [Arduino.cc](https://www.arduino.cc/en/Main/Software) - on Mac, drag the software to your Applications Folder.
 * Connect your Arduino to your Mac/PC using a USB Cable
 * Open the Arduino Software
 * Set the Port in "Tools > Port", on Windows it will be something like "COM5", on MAC more like "/dev/cu.usbmodem14301"
