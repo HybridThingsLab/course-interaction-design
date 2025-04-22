@@ -1,10 +1,10 @@
 # Interaction Design Basics / Grundlagen Interaktiver Gestaltung IA2
 
-## Summer Term 2024
+## Summer Term 2025
 
 [Augsburg Technical University of Applied Sciences, Faculty of Design](https://www.tha.de/Gestaltung.html)
 
-teaching staff: Prof. Andreas Muxel, Prof. Daniel Rothaug, Clemens Mahler
+teaching staff: Prof. Andreas Muxel, Prof. Daniel Rothaug, Sophie Erbsner
 
 
 ## Setup
