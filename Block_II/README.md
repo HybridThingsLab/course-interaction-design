@@ -48,7 +48,7 @@ How to set Chrome as your default browser for Live Server in Visual Studio Code:
 ### Code Repository
 We packed a bunch of examples from this course as well together with the files needed for p5.js in a folder structure on GitHub. We will update this repository from time to time to correct bugs or add new examples. There are two ways to get all these files.
 
-1. __BEGINNER__: Download the repository from the GitHub Website (https://github.com/HybridThingsLab/course-interaction-design/archive/refs/heads/master.zip). Use button "Clone or Download" on the top right side of the page, download the ZIP and extract it.
+1. __BEGINNER__: Download the repository from the GitHub Website ([https://github.com/HybridThingsLab/course-interaction-design/archive/refs/heads/master.zip](https://github.com/HybridThingsLab/course-interaction-design.git)). Use button "<CODE>" on the top right side of the page, download the ZIP and extract it.
 
 2. __EXPERT__: In Visual Studio Code click the "Files" Icon, then "Clone Repository", paste the Repository URL https://github.com/HybridThingsLab/course-interaction-design, hit Enter, create a folder for our files and select it as download location.
 On Windows Machines you also need to install Git: https://git-scm.com/download/win
@@ -74,20 +74,5 @@ You will see some files but these are the most important:
 ### Make it your code!
 Please create your own code folder somewhere outside our code folder and copy one of the example folders over. You should not chage anythinig inside our code structure because it may interfere with future updates that we may do on the code if you use GIT (Collisions)
 
-## The "Blocks"
-We structured our course in three "Blocks", static, interactive and physical.
-
-## Recommended tutorials
-* beginner P5.js tutorials by Daniel Shiffmann on TheCodingTrain, https://thecodingtrain.com/beginners/p5js/
-* Introduction p5.js: https://www.youtube.com/watch?v=8j0UDiN7my4
-* Comparing p5.js and Processing (Daniel Shiffmann)
-    * Part I: https://www.youtube.com/watch?v=AmlAiKsiy0o
-    * Part II: https://www.youtube.com/watch?v=AsjPJ5AWkDc 
-
-Note: in the tutorials another editor is used. But currently Shiffmann also uses Visual Studio Code.
-
-## Further links
-
-### Creative coding
-* Book 'Generative Gestaltung', http://www.generative-gestaltung.de/2/
-* Programming Design Systems by Rune Madsen, https://programmingdesignsystems.com
+## Recommended Links
+* https://p5js.org/tutorials/
