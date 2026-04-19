@@ -21,15 +21,13 @@ More Details on P5.js:
 * P5.js, https://p5js.org
 * P5.js VS Processing, https://github.com/processing/p5.js/wiki/Processing-transition 
 * Libraries, https://p5js.org/libraries/
-* Learn, https://p5js.org/learn/
+* Tutorials, https://p5js.org/tutorials/ 
 
 ### Extensions for Visual Studio Code
 In Visual Studio Code click the Button with the 4 squares "Extensions", search for and "Install" the extension.
 
 * p5js Snippets
 * Live Server
-* Beautify
-* Only if __REALLY__ needed: German Language Pack for Visual Studio Code
 
 Tutorial on Extensions: https://www.youtube.com/watch?v=PmdbndOoKq4
 
@@ -72,6 +70,3 @@ You will see some files but these are the most important:
 
 ### Make it your code!
 Please create your own code folder somewhere outside our code folder and copy one of the example folders over. You should not chage anythinig inside our code structure because it may interfere with future updates that we may do on the code if you use GIT (Collisions)
-
-## Recommended Links
-* https://p5js.org/tutorials/
