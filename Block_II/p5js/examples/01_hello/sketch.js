@@ -1,20 +1,11 @@
 // globals
-let customFont;
-
-// preload
-function preload() {
-  // load data here
-  customFont = loadFont('data/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
-}
+size_square = 100;
 
 // setup
-function setup() {
+async function setup() {
 
   // init canvas
-  canvas = createCanvas(800, 800).parent('canvas');
-
-  // init custom fonts
-  textFont(customFont);
+  canvas = createCanvas(600, 600);
 
 }
 
@@ -24,11 +15,12 @@ function draw() {
   // background
   background(0);
 
-  // show seconds and milliseconds
+  // re-calculate size of square based mouse position
+  size_square = map(mouseX, 0, width, 50, 200);
+
+  // draw square
   noStroke();
   fill(255);
-  textAlign(CENTER, CENTER);
-  textSize(48);
-  text("Hello", width / 2, height / 2);
-
+  rectMode(CENTER);
+  rect(width/2, height/2, size_square, size_square);
 }

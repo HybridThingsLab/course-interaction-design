@@ -1,6 +1,6 @@
 # Interaction Design Basics / Grundlagen Interaktiver Gestaltung IA2
 
-## Summer Term 2025
+## Summer Term 2026
 
 [Augsburg Technical University of Applied Sciences, Faculty of Design](https://www.tha.de/Gestaltung.html)
 
@@ -27,7 +27,6 @@ More Details on P5.js:
 In Visual Studio Code click the Button with the 4 squares "Extensions", search for and "Install" the extension.
 
 * p5js Snippets
-* JSON Tools
 * Live Server
 * Beautify
 * Only if __REALLY__ needed: German Language Pack for Visual Studio Code
