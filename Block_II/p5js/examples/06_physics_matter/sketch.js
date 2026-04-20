@@ -4,7 +4,7 @@
 // - Bodies:     creates physical shapes (rectangles, circles, etc.)
 // - Body:       controls a single body (set position, velocity, etc.)
 // - Composite:  adds or removes objects from the physics world
-// - Constraint: connects two bodies with an invisible "rope" or "spring"
+// - Constraint: connects two bodies with an invisible "rope" or "spring", used for dragging boxes with the mouse
 const { Engine, Bodies, Body, Composite, Constraint } = Matter;
 
 // --- globals (tweak these to change the behavior) ---
