@@ -1,4 +1,4 @@
-# Interaction Design Basics / Grundlagen Interaktiver Gestaltung IA2
+# Fundamentals of Interaction Design / Grundlagen Interaktiver Gestaltung IA2
 
 ## Summer Term 2026
 
