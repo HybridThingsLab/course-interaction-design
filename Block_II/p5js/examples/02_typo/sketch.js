@@ -7,7 +7,7 @@ let degree;
 async function setup() {
 
   // load data here
-  customFont = await loadFont('assets/Inter-VariableFont_opsz,wght.ttf');
+  customFont = await loadFont('assets/Inter.ttf');
 
   // init canvas
   canvas = createCanvas(600, 600);
