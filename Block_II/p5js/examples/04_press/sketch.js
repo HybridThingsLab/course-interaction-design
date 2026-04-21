@@ -12,7 +12,7 @@ let targetScale_released = 1.0;
 let smooth_interpolation = 0.15;
 
 // setup
-function setup() {
+async function setup() {
 
   // init canvas
   createCanvas(600, 600);

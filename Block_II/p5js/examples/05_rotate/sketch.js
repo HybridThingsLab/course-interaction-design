@@ -9,7 +9,7 @@ let size_rect= 24;
 let length_line = 0;
 
 // setup
-function setup() {
+async function setup() {
 
   // init canvas
   createCanvas(600, 600);

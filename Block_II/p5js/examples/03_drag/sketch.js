@@ -9,7 +9,7 @@ let color_signal_circle = '#00ff00'; // signal color — use only when justified
 let size_circle = 24;
 
 // setup
-function setup() {
+async function setup() {
 
   // init canvas
   createCanvas(600, 600);
