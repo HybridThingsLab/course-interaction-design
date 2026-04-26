@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sL https://unpkg.com/ml5@1.3.1/dist/ml5.min.js -o /Users/andreasmuxel/Documents/DATA/03_DEV/25_HybridThingsLab/course-interaction-design/Block_II/p5js/examples/09_bodyPose/js/ml5.min.js)",
+      "Bash(curl -L --retry 3 \"https://unpkg.com/ml5@1.3.1/dist/ml5.min.js\" -o /Users/andreasmuxel/Documents/DATA/03_DEV/25_HybridThingsLab/course-interaction-design/Block_II/p5js/examples/09_bodyPose/js/ml5.min.js)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/ml5js/ml5-next-gen/main/examples/bodyPose-keypoints/sketch.js\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/ml5js/ml5-next-gen/main/examples/bodyPose-skeletal-connections/sketch.js\")",
+      "Bash(curl *)",
+      "WebFetch(domain:docs.ml5js.org)",
+      "WebFetch(domain:editor.p5js.org)",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('dist',{}\\).get\\('tarball',''\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d['version'], d.get\\('dist',{}\\).get\\('tarball',''\\)\\)\")",
+      "WebFetch(domain:tonejs.github.io)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d['version']\\)\")"
+    ]
+  }
+}
